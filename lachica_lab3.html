@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>My Profile</title> 
+
+</head>
+<body> 
+ 
+ 
+ 
+<!-- Simple Navigation --> 
+
+<header class="navbar">
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#contact-me">Message Me</a>
+  </div>
+
+  <div class="right-side">
+    <span id="greeting"></span>
+    <button id="themeBtn">Dark Mode</button>
+  </div>
+</header>
+   
+<!-- 2-Column Layout --> 
+<section id="main-content">
+        <!-- LEFT COLUMN --> 
+ 
+    <div class="left-column" id="home">
+        <div class="info-me">
+        <img src="profile.jpg" alt="My Profile" class="profile-img"><br><br>
+        <h2 class="profile-name">Andrea Beatrice C. Lachica</h2>
+
+	<span class="job-title" id="jobTitle">Web Developer</span>
+	<button id="editJobBtn">Edit Job Title</button>
+
+ 
+            <div class="info-me contact-section">
+                <h3>Contact</h3> 
+                <p>Email: <a href="mailto:abbylachica1224@gmail.com">abbylachica1224@gmail.com</a></p> 
+            </div> 
+ 
+            <button id="toggleSkillsBtn">Hide Skills</button>
+
+		<div class="info-me" id="skillsSection"> 
+ 		 <h3>Skills</h3> 
+  			<ul class="styled-list">
+    			<li><strong>Web Development</strong></li>
+    			<li><strong>Graphic Design</strong></li>
+    			<li><strong>Digital Drawing</strong></li>
+  			</ul> 
+		</div>
+
+			<div class="info-me"> 
+ 		        <h3>Achievements</h3>
+ 			 <ul class="styled-list">
+    			<li><strong>SHS Graduate with High Honors</strong></li>
+    			<li><strong>College Dean's Lister</strong></li>
+    			<li><strong>Art Contest Winner</strong></li>
+  			</ul> 
+			</div>
+ 
+        <!-- RIGHT COLUMN --> 
+ 
+        <div class="right-column" id="about"> 
+            <div class="info-me"> 
+                <h2>About Me</h2>
+                <p class="about-me">
+		<p>Hello! I'm Andrea Beatrice C. Lachica, a optimistic 2nd-year BSIT-MI student at NU Fairview. I work well individually and with others, aiming to give my best and produce meaningful outputs. My favourite hobbies are drawing and playing the piano.</p><br>
+            </div> 
+ 
+          <div class="info-me" id="contact-me"> 
+  <h2>Message Me</h2> 
+
+  <form class="message-form" action="submit" method="post"> 
+    <p> 
+      Name:<br>
+      <input type="text" id="nameField" name="name" required
+             oninvalid="this.setCustomValidity('Please enter your name.')"
+             oninput="this.setCustomValidity('')"> 
+    </p> 
+
+    <p> 
+      Email:<br>
+      <input type="email" id="emailField" name="email" required
+             oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+             oninput="this.setCustomValidity('')"> 
+    </p> 
+
+    <p>
+      Message:<br>
+      <textarea id="msgBox" name="message" maxlength="200" required
+                oninvalid="this.setCustomValidity('Please enter a message.')"
+                oninput="this.setCustomValidity('')"></textarea><br>
+      Characters left: <span id="counter">200</span>
+    </p>
+
+    <p> 
+      <input type="submit" value="Submit"> 
+    </p> 
+  </form> 
+</div>
+ 
+<!-- FOOTER --> 
+ 
+<div> 
+    <footer class="website-footer">
+	<strong>WebProg - Web Programming 2025</strong></footer> 
+ 	<center><p id="dateDisplay"></p></center>
+    </footer>
+ 
+</div> 
+ 
+</body> 
+</html>

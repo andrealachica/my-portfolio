@@ -1,0 +1,395 @@
+:root {
+  --color-primary: #456882;   
+  --color-secondary: #1B3C53; 
+  --color-accent: #EFECE3;   
+  --color-light: #F9F3EF;    
+  --color-shadow: rgba(0,0,0,0.15); 
+}
+
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Override */
+body.dark-mode,
+body.dark-mode .styled-list li,
+body.dark-mode .left-column,
+body.dark-mode .right-column,
+body.dark-mode .info-me,
+body.dark-mode .job-title,
+body.dark-mode .profile-name,
+body.dark-mode .styled-list li,
+body.dark-mode .navbar,
+body.dark-mode .contact-section p,
+body.dark-mode .website-footer,
+body.dark-mode .message-form input[type="text"],
+body.dark-mode .message-form input[type="email"],
+body.dark-mode .message-form textarea {
+  background-color: #121212;
+  color: #f1f1f1;
+  border-color: #333; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* left links, right-side content */
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px var(--color-shadow);
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+/* Greeting + Dark Mode button grouped on the right */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between greeting and button */
+}
+
+#greeting {
+  font-weight: bold;
+  color: var(--color-light);
+  white-space: nowrap;
+}
+
+#themeBtn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#themeBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+
+body.dark-mode #editJobBtn {
+  background-color: #333;  
+  color: #f1f1f1;           
+}
+
+body.dark-mode #editJobBtn:hover {
+  background-color: #444;   
+  color: #91C4C3;           
+}
+
+body.dark-mode #toggleSkillsBtn {
+  background-color: #333;  
+  color: #f1f1f1;           
+}
+
+body.dark-mode #toggleSkillsBtn:hover {
+  background-color: #444;   
+  color: #91C4C3;           
+}
+
+
+body.dark-mode .message-form input[type="submit"]:hover {
+  background-color: #444;
+  color: #91C4C3; 
+}
+
+body.dark-mode .message-form input[type="submit"] {
+  background-color: #333;   
+  color: #f1f1f1;          
+}
+
+body.dark-mode .message-form input[type="submit"]:hover {
+  background-color: #444;   
+  color: #91C4C3;           
+}
+
+body.dark-mode .profile-img {
+  border-color: #444;
+}
+
+body.dark-mode .styled-list{
+  background-color: #1e1e1e;
+  color: #91C4C3;
+}
+
+
+body.dark-mode .styled-list li:hover {
+  background-color: #1e1e1e;
+  color: #91C4C3;
+}
+
+body.dark-mode .styled-list strong {
+  background-color: #1e1e1e;
+  color: #91C4C3;
+}
+
+body.dark-mode .website-footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .info-me {
+  color: #f1f1f1;
+}
+
+body.dark-mode #themeBtn {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+body.dark-mode #themeBtn:hover {
+  background-color: #444;
+  color: #91C4C3;
+}
+
+
+#toggleSkillsBtn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggleSkillsBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+#editJobBtn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#editJobBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-primary);
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f1f1f1; 
+}
+
+/* Two Column Layout */
+#main-content { 
+  display: flex; 
+  max-width: 1100px;  
+  margin: 20px auto;   
+  gap: 20px;
+  padding: 0 15px;
+} 
+
+.left-column, .right-column { 
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px var(--color-shadow);    
+  background-color: var(--color-light);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Profile Layout */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid var(--color-secondary);
+  box-shadow: 0 4px 10px var(--color-shadow);   
+  transition: all 0.3s ease-in-out; 
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Name */
+.profile-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+/* Job Title */
+.job-title {
+  color: var(--color-secondary);
+  font-style: italic;
+  display: block;
+  text-align: center;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+/* Contact Section */
+.contact-section p {
+  font-size: 16px;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+
+body.dark-mode .contact-section a {
+  color: #91C4C3; 
+}
+
+body.dark-mode .contact-section a:hover {
+  color: #f1f1f1; 
+}
+
+/* Styled List */
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-list li {
+  background: var(--color-light);
+  border-left: 4px solid var(--color-secondary);
+  padding: 10px 12px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.styled-list li:hover {
+  color: var(--color-secondary);                  
+  background-color: var(--color-accent);    
+  transform: scale(1.05);
+}
+
+.styled-list strong {
+  transform: translateX(5px);
+  color: var(--color-primary); 
+}
+
+/* About Me Section */
+.about-me {
+  line-height: 1.8;
+  text-align: justify;
+  margin: 10px 0 0 0;
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+/* Info Layout */
+.info-me {
+  min-width: 150px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-secondary);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: var(--color-light);
+  box-shadow: 0 4px 8px var(--color-shadow);
+  transition: all 0.3s ease; 
+}
+
+.info-me:hover {
+  transform: translateY(-3px);
+}
+
+/* Message Form Layout */
+.message-form input[type="text"],
+.message-form input[type="email"],
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.message-form input[type="submit"] {
+  padding: 12px 10px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-form input[type="submit"]:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+/* Footer Styling */
+.website-footer {
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 15px 0;
+  font-size: 13px;
+  margin-top: 50px;
+  box-shadow: 0 -2px 6px var(--color-shadow);
+}
